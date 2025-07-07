@@ -5,19 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PingTool"
         mc:Ignorable="d"
-        Title="Ping Tool" Height="700" Width="1000">
+        Title="Ping Tool" Height="750" Width="1000">
+
+    <Window.Resources>
+        <!-- Style for DataGrid Column Headers -->
+        <Style x:Key="CenterHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+
+    </Window.Resources>
+
     <Grid Width="1000" Height="800">
-        <DataGrid x:Name="DataGrid_IP" Margin="121,139,121,289" FontSize="18"/>
+        <DataGrid x:Name="DataGrid_IP" Margin="121,139,121,289" FontSize="18"
+                  ColumnHeaderStyle="{StaticResource CenterHeaderStyle}"/>
+
+        <!-- Other controls below remain unchanged -->
         <TextBox x:Name="IPStart" HorizontalAlignment="Left" Margin="242,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18"/>
         <TextBox x:Name="IPEnd" HorizontalAlignment="Left" Margin="242,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18"/>
         <Label Content="Starting IP: " HorizontalAlignment="Left" Margin="121,21,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Ending IP: " HorizontalAlignment="Left" Margin="121,57,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="Button_Submit" Content="Submit" HorizontalAlignment="Left" Margin="300,98,0,0" VerticalAlignment="Top" FontSize="18" Width="79"/>
-        <Label x:Name="Label_IP" Content="IP ADDRESS" HorizontalAlignment="Left" Margin="245,560,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="Label_Status" Content="Status" HorizontalAlignment="Left" Margin="541,560,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="Label_Static_IP" Content="IP ADDRESS: " HorizontalAlignment="Left" Margin="121,557,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label x:Name="Label_Static_Status" Content="Network Status: " HorizontalAlignment="Left" Margin="385,557,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_IP" Content="10.131.192.1" HorizontalAlignment="Left" Margin="274,559,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_Status" Content="Success" HorizontalAlignment="Left" Margin="644,600,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_Static_IP" Content="IP ADDRESS: " HorizontalAlignment="Left" Margin="148,557,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_Static_Status" Content="Network Status: " HorizontalAlignment="Left" Margin="482,599,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Button x:Name="Button_Help" Content="Help" HorizontalAlignment="Left" Margin="123,98,0,0" VerticalAlignment="Top" FontSize="18" Width="79"/>
         <Label Content="Ping Tool" HorizontalAlignment="Left" Height="107" Margin="510,19,0,0" VerticalAlignment="Top" Width="369" FontFamily="Broadway" FontSize="72"/>
+        <Label x:Name="Label_Mac_Address" Content="MAC ADDRESS: " HorizontalAlignment="Left" Margin="121,599,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_DNS_Name" Content="DNS Name: " HorizontalAlignment="Left" Margin="524,557,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_MAC_Status" Content="00-00-00-00-00-00" HorizontalAlignment="Left" Margin="274,601,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_DNS_Status" Content="SFCN-0000000" HorizontalAlignment="Left" Margin="644,559,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_Buffer" Content="Buffer: " HorizontalAlignment="Left" Margin="567,635,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_RTT" Content="RTT: " HorizontalAlignment="Left" Margin="787,597,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_RTT_Status" Content="Success" HorizontalAlignment="Left" Margin="844,599,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_Buffer_Status" Content="Size" HorizontalAlignment="Left" Margin="648,634,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Label_Mac_Address_Copy" Content="MAC ADDRESS: " HorizontalAlignment="Left" Margin="121,599,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_Mac_State" Content="MAC State: " HorizontalAlignment="Left" Margin="163,635,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Label_MAC_State_Status" Content="Probe" HorizontalAlignment="Left" Margin="274,637,0,0" VerticalAlignment="Top" FontSize="18"/>
     </Grid>
 </Window>
